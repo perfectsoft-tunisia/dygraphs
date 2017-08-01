@@ -76,6 +76,17 @@ OPTIONS_REFERENCE =  // <JSON>
     "type": "integer",
     "description": "Height, in pixels, of the chart. If the container div has been explicitly sized, this will be ignored."
   },
+  "beforeZoomCallback": {
+    "default": "null",
+    "labels": ["Callbacks"],
+    "type": "function(minDate, maxDate, yRanges)",
+    "parameters": [
+      [ "minDate" , "milliseconds since epoch" ],
+      [ "maxDate" , "milliseconds since epoch." ],
+      [ "yRanges" , "is an array of [bottom, top] pairs, one for each y-axis." ]
+    ],
+    "description": "A function to call when the zoom window is going to change (either by zooming in or out). If you want to cancel the zooming you need to return false."
+  },
   "zoomCallback": {
     "default": "null",
     "labels": ["Callbacks"],

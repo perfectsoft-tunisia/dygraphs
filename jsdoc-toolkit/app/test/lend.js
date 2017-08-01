@@ -4,30 +4,19 @@ var Person = Class.create(
       @lends Person.prototype
     */
     {
-      initialize: function(name) {
+        initialize: function (name) {
             this.name = name;
         },
-        say: function(message) {
+        say: function (message) {
             return this.name + ': ' + message;
-        }
+        },
+        /** like say but more musical */
+    	sing: function(song) {
+    	}
+    },
+    /** @lends Person */
+    {
+    	getCount: function() {
+    	}
     }
  );
-
-/** @lends Person.prototype */
-{
-	/** like say but more musical */
-	sing: function(song) {
-	}
-}
-
-/** @lends Person */
-{
-	getCount: function() {
-	}
-}
-
-/** @lends Unknown.prototype */
-{
-	notok: function() {
-	}
-}

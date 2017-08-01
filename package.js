@@ -15,25 +15,6 @@ Package.onUse(function(api) {
     'ecmascript',
   ], 'client');
 
+  api.addFiles('css/dygraph.css');
   api.mainModule('index.es5.js', 'client');
-});
-
-Package.onTest(function(api) {
-  api.use([
-    'ecmascript',
-    'mongo',
-    'random',
-    'dispatch:mocha',
-    'accounts-password@1.3.1',
-    'practicalmeteor:sinon',
-    'practicalmeteor:chai@2.1.0_1',
-    'underscore'
-  ], 'server');
-
-  api.use('johanbrook:publication-collector');
-
-  api.addFiles([
-    'tests/publications.js',
-    'tests/publication-collector.test.js'
-  ], 'server');
 });
